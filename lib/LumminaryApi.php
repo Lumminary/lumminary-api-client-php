@@ -117,8 +117,8 @@ class LumminaryApi extends Api\LumminaryAPISpecApi
         if(!is_null($authorization["scopes"]["name"]))
         {
             $authorizationMetadata["customer_name"] = array(
-                "first_name" => $authorization["scopes"]["name"]["first_name"],
-                "last_name" => $authorization["scopes"]["name"]["last_name"]
+                "first_name" => $authorization["scopes"]["name"]["firstName"],
+                "last_name" => $authorization["scopes"]["name"]["lastName"]
             );
         }
         if(!is_null($authorization["scopes"]["address"]))
