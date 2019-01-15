@@ -3,7 +3,6 @@ namespace Lumminary\Client;
 
 use Lumminary\Client\Api;
 use Lumminary\Client\ApiException;
-use Lumminary\Client\Api\LumminaryAPISpecApi;
 
 class LumminaryApi extends Api\LumminaryAPISpecApi
 {
@@ -41,7 +40,6 @@ class LumminaryApi extends Api\LumminaryAPISpecApi
 
         parent::__construct(
             new \GuzzleHttp\Client(array(
-                "verify" => false,
                 "connect_timeout" => LumminaryApi::CONNECT_TIMEOUT_S,
                 "timeout" => LumminaryApi::REQUEST_TIMEOUT_S
             )),
@@ -60,7 +58,6 @@ class LumminaryApi extends Api\LumminaryAPISpecApi
 
         $authApiInstance = new Api\LumminaryAPISpecApi(
             new \GuzzleHttp\Client(array(
-                "verify" => false,
                 "connect_timeout" => LumminaryApi::CONNECT_TIMEOUT_S,
                 "timeout" => LumminaryApi::REQUEST_TIMEOUT_S
             )),
