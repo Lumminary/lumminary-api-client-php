@@ -258,7 +258,7 @@ class LumminaryApi extends Api\LumminaryAPISpecApi
         preg_match_all("/NC_(0)+(.*)/", $chromosomeAccession, $matches);
         $accessionNumber = intval($matches[2][0]);
 
-        if($accessionNumber <= 23)
+        if($accessionNumber < 23)
         {
             return (string)$accessionNumber;
         }
