@@ -18,7 +18,7 @@ class LumminaryApi extends Api\LumminaryAPISpecApi
      */
     protected $_credentials;
 
-    public function __construct($credentials, $connectTimeoutSeconds = LumminaryApiPublic::CONNECT_TIMEOUT_S, $requestTimeoutSeconds = LumminaryApiPublic::REQUEST_TIMEOUT_S)
+    public function __construct($credentials, $connectTimeoutSeconds = LumminaryApi::CONNECT_TIMEOUT_S, $requestTimeoutSeconds = LumminaryApi::REQUEST_TIMEOUT_S)
     {
         $this->_credentials = $credentials;
 
